@@ -19,16 +19,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > pwd - show current directory path
-> > mkdir - create a directory
-> > rmdir - delete a directory
-> > touch filename.filetype - create empty file "filename"
-> > rm - delete a file
-> > mv newname oldname - moving a file effectively renaming it
-> > ls - list files
-> > cp - copy a file
-> > find . -name '*.txt' -print - find all files ending in .txt change extension or * content to search for specific files
-> > cat filename.txt - creates a text file and allows for instant editing from command line - q to exit
+> > pwd - show current directory path  
+> > mkdir - create a directory  
+> > rmdir - delete a directory  
+> > touch filename.filetype - create empty file "filename"  
+> > rm - delete a file  
+> > mv newname oldname - moving a file effectively renaming it  
+> > ls - list files  
+> > cp - copy a file  
+> > find . -name '*.txt' -print - find all files ending in .txt change extension or * content to search for specific files  
+> > cat filename.txt - creates a text file and allows for instant editing from command line - q to exit  
 
 ---
 
@@ -43,13 +43,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > `ls` - list files
-> > `ls -a` - list all files
-> > `ls -l` - list files long format
-> > `ls -lh` list files long format human readable
-> > `ls -lah` list all files long format human readable
-> > `ls -t` list files sorted by time
-> > `ls -Glp` list files long format, no grouping, and indicator appended to directories 
+> > `ls` - list files  
+> > `ls -a` - list all files  
+> > `ls -l` - list files long format  
+> > `ls -lh` list files long format human readable  
+> > `ls -lah` list all files long format human readable  
+> > `ls -t` list files sorted by time  
+> > `ls -Glp` list files long format, no grouping, and indicator appended to directories   
 
 ---
 
