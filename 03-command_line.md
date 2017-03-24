@@ -19,16 +19,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > pwd - show current directory path  
-> > mkdir - create a directory  
-> > rmdir - delete a directory  
-> > touch filename.filetype - create empty file "filename"  
-> > rm - delete a file  
-> > mv newname oldname - moving a file effectively renaming it  
-> > ls - list files  
-> > cp - copy a file  
-> > find . -name '*.txt' -print - find all files ending in .txt change extension or * content to search for specific files  
-> > cat filename.txt - creates a text file and allows for instant editing from command line - q to exit  
+> > `pwd` - show current directory path  
+> > `mkdir` - create a directory  
+> > `rmdir` - delete a directory  
+> > `touch filename.extension` - create empty file "filename"  
+> > `rm` - delete a file  
+> > `mv newname oldname` - moving a file effectively renaming it  
+> > `ls` - list files  
+> > `cp` - copy a file  
+> > `find . -name '*.txt' -print` - find all files ending in .txt change extension or * content to search for specific files  
+> > `cat filename.txt` - creates a text file and allows for instant editing from command line - q to exit  
 
 ---
 
@@ -57,15 +57,29 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > `ls -c` - lists with timestamp  
+> > `ls -rt` - displays files in reverse order by time stamp  
+> > `ls -R` - displays subdirectories  
+> > `ls -1` - displays one entry on each lines  
+> > `ls -u` - displays files by access time
 ---
 
 ### Q4.  Xargs   
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `xargs` constructs a command in the command line from standard input.  
+> > This allows more control over the output by using "xargs -p" to prompt  
+> > to see if they want to continue executing the file, "xargs -d\n" to  
+> > read the text literally including all line breaks, "xargs -n ##" to  
+> > control how many characters appear per line in a list. Simply typing  
+> > "xargs" with create an input space, left by pressing ctrl + d which  
+> > results in echo-ing of entered text. xargs can be combined with other  
+> > commands such as find to search over/in files and then perform some  
+> > action on those files that fit the criteria  
+> >  
+> > For example: `$ find . -name "*.txt" | xargs rm -rf` will remove all  
+> > text files from the current directory.
 
  
 
