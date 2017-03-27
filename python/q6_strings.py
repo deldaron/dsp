@@ -18,6 +18,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count > 9:
+        return("Number of donuts: many")
+    else:
+        return("Number of donuts: " + str(count))
     raise NotImplementedError
 
 
@@ -37,6 +41,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if len(s) < 2:
+        return('')
+    else:
+        return(s[:2] + s[-2:])
     raise NotImplementedError
 
 
@@ -56,8 +64,14 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    new_s = s[0]
+    for l in s[1:]:
+        if l == s[0]:
+            new_s = new_s + '*'
+        else:
+            new_s = new_s + l
+    return(new_s)
     raise NotImplementedError
-
 
 def mix_up(a, b):
     """
@@ -74,6 +88,9 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    new_a = b[:2] + a[2:]
+    new_b = a[:2] + b[2:]
+    return(new_a + ' ' + new_b)
     raise NotImplementedError
 
 
@@ -91,6 +108,14 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    new_s = ''
+    if len(s) > 3 and s[-3:] != 'ing':
+        new_s = s + 'ing'
+    elif len(s) > 3:
+        new_s = s + 'ly'
+    else: 
+        new_s = s
+    return(new_s)
     raise NotImplementedError
 
 
@@ -111,6 +136,14 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    new_s = ''
+    not_index = s.find('not')
+    bad_index = s.find('bad')
+    if not_index < bad_index:
+        new_s = s[:not_index] + 'good' + s[(bad_index + 4):]
+    else:
+        new_s = s
+    return(new_s)
     raise NotImplementedError
 
 
@@ -130,4 +163,28 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+    #Placeholder Variables
+    a_front = ''
+    a_back = ''
+    b_front = ''
+    b_back = ''
+    
+    #Defined half length variables for readability during indexing
+    a_half_len = int(len(a)/2)
+    b_half_len = int(len(b)/2)
+    
+    #Check for evenness and if not even add one to half lengths for proper indexing
+    if len(a) % 2 == 0:
+        a_front = a[:a_half_len]
+        a_back = a[a_half_len:]
+    else:
+        a_front = a[:a_half_len + 1]
+        a_back = a[a_half_len + 1:]
+    if len(b) % 2 == 0:
+        b_front = b[:b_half_len]
+        b_back = b[b_half_len:]
+    else:
+        b_front = b[:b_half_len + 1]
+        b_back = b[b_half_len + 1:]
+    return(a_front + b_front + a_back + b_back)
     raise NotImplementedError
