@@ -70,7 +70,7 @@ def fix_start(s):
             new_s = new_s + '*'
         else:
             new_s = new_s + l
-    return(new_s)
+    return new_s
     raise NotImplementedError
 
 def mix_up(a, b):
@@ -115,7 +115,7 @@ def verbing(s):
         new_s = s + 'ly'
     else: 
         new_s = s
-    return(new_s)
+    return new_s
     raise NotImplementedError
 
 
@@ -143,7 +143,7 @@ def not_bad(s):
         new_s = s[:not_index] + 'good' + s[(bad_index + 4):]
     else:
         new_s = s
-    return(new_s)
+    return new_s
     raise NotImplementedError
 
 
@@ -186,5 +186,5 @@ def front_back(a, b):
     else:
         b_front = b[:b_half_len + 1]
         b_back = b[b_half_len + 1:]
-    return(a_front + b_front + a_back + b_back)
+    return a_front + b_front + a_back + b_back
     raise NotImplementedError
