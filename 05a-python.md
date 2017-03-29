@@ -39,7 +39,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
   
 ```Python
 def square(x):  
->> return x ** 2  
+  return x ** 2  
 print(square(2))
 square = lambda x: x ** 2  
 print(square(2))
