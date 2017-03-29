@@ -34,9 +34,24 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
----
+>> Pythons `lambda` is an anonymous single expression function. This allows programmers to nest local functions without explicity    
+>>defining and calling them. Thus the following two sets of code have the same result:  
+  
+```Python
+def square(x):  
+>> return x ** 2  
+print(square(2))
+square = lambda x: x ** 2  
+print(square(2))
+```  
+>> Even though only the first set of code used the `def` keyword, both sets created a function that multiplies the input by itself  
+  
+>> Using `lambda` as the `key` in `sorted` allows for sorting in unique ways.  Let's say you had a list of positive and negative numbers  
+>> and you wanted to sort them according to their absolute values without changing the value itself. This can be acheived as such:
+```Python
+example_list = [3,1,-5,2,6,-10,9,-4]  
+print(sorted(example_list, key = lambda n: abs(n)))  
+```
 
 ### Q4. List Comprehension, Map &amp; Filter
 
