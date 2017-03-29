@@ -60,7 +60,43 @@ print(sorted(example_list, key = lambda n: abs(n)))
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are convenient ways to create lists using computations or expressions. One could create a list of all numbers between one and ten sqaured by iterating over the range 0, 10 and appending each number squared to a blank list.  Alternatively, one could use list comprehension to do this in one line:
+```Python
+#The first option:
+new_list = []
+for n in range(11):
+  new_list.append(n**2)
+
+#Using list comprehension:
+new_list = [n**2 for n in range(11)]
+```
+  
+>>Both iterations of new_list are the same, but using list comprehension allowed for more concise, cleaner code.  This is especially useful for more complex uses than squaring a number.  
+  
+>>`Map` applies a function over a set of iterables and thus is similar to list comprehension, but less exhaustive (list comprehension is the most exhaustive of the three, since conditionals and functions can be passed into set comprehension). Also, in Python 3 using `map` creates a `map` object instead of a list which must be converted to a list if it needs to be printed, but can stay as a `map` object for iterating over.  
+
+```Python
+#Example of using map():
+map(lambda n: n**2, range(10))
+#This creates a map object with the numbers 0 to 9 (inclusive) squared which can be stored as a variable.
+```
+
+>>`Filter` is similar to `map`, but the function passed into `filter` should return a `boolean`. From this `filter` will only add elements to a `list` for which the resulting `boolean` is `True`. `Filter` functions in a similar way to `map` in Python 3 producing a `filter` object.  
+
+```Python
+#Example of using filter():
+filter(lambda n: n % 2 == 0, range(21)
+#This creates a filter object containing all even numbers between 0 and 20 (inclusive).
+```
+>>`Set` and `dictionary` comprehensions function similarly to `list` comprehensions except they produce `sets` and `dictionarys` respectively. 
+
+```Python
+#Example of set comprehension:
+set_comp = set([n**2 for n in range(11)])
+
+#Example of dictionary comprehension:
+dict_comp = {(k,v) for (k,v) in zip(range(3), ['a','b','c'])}
+```
 
 ---
 
