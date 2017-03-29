@@ -52,6 +52,8 @@ print(square(2))
 ```Python
 example_list = [3,1,-5,2,6,-10,9,-4]  
 print(sorted(example_list, key = lambda n: abs(n)))  
+
+#returns [1, 2, 3, -4, -5, 6, 9, -10]
 ```
 
 ### Q4. List Comprehension, Map &amp; Filter
