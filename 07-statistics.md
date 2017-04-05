@@ -62,10 +62,25 @@ $ git clone https://github.com/AllenDowney/ThinkStats2.git
 
 *Include your Python code, results and explanation (where applicable).*
 
-###Q1. [Think Stats Chapter 2 Exercise 4](statistics/2-4-cohens_d.md) (effect size of Cohen's d)  
+### Q1. [Think Stats Chapter 2 Exercise 4](statistics/2-4-cohens_d.md) (effect size of Cohen's d)  
 Cohen's D is an example of effect size.  Other examples of effect size are:  correlation between two variables, mean difference, regression coefficients and standardized test statistics such as: t, Z, F, etc. In this example, you will compute Cohen's D to quantify (or measure) the difference between two groups of data.   
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
+
+>> The mean weight for firsts is 7.201094430437772 lbs. The mean weight for others is 7.325855614973262 lbs.
+The difference in means is -0.12476118453549034 lbs, with first babies being smaller than others.
+The Cohen Effect Size is -0.0886729270726 which is approximately 3 times larger than the effect size for pregnancy length.
+
+>> Code used to find this answer:
+```Python
+#Added at the end of this chapters ipynb so CohenEffectSize and firsts and others were already defined
+print("The mean weight for firsts is " + str(firsts.totalwgt_lb.mean()) + " lbs. The mean weight for others is " + \
+      str(others.totalwgt_lb.mean()) + " lbs.")
+print("The difference in means is " + str(firsts.totalwgt_lb.mean()-others.totalwgt_lb.mean()) + " lbs, with first babies\
+ being smaller than others.")
+print("The Cohen Effect Size is " + str(CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb)) + " which is approximately " + \
+      str(abs(round(CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb)/.029))) + " times larger than the effect size for pregnancy length.")
+```
 
 ###Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
