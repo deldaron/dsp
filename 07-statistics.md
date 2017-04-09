@@ -94,7 +94,19 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> `Bayes Theorem` P(A|B) = P(A)P(B|A)/P(B)  
+>> I this scenario:
+>>>> *`P(A|B)` is the probability that Elvis' twin was identical given that he had a twin brother.  
+>>>> *`P(A)` is the probability of having an identical twin which is `(1/300)`.    
+>>>> *`P(B|A)` is the probability of having a twin given that you have an identical twin which equals `1` for obvious reasons.    
+>>>> *`P(B)` is the probability of having a twin, which equals the prob. of having a fraternal _male_ twin (1/250, or half of 1/125) + prob. of having an identical twin (1/300) or `(11/1500)`.  
+>>  
+>> Subbing into the equation:  
+>>>> P(A|B) = (1/300)(1)/(11/1500) = **.4545**  
+>>  
+>> `**Note: **` this answer assumes that the observation of fraternal twins (1/125) is evenly disbursed between same-sexed and opposite-sexed twins, thus the frequency of 1/125 was divided by two to only represent the same-sexed fraternal twinning. 
+>> 
+>> An alternative approach would be to normalize the observed frequencies of fraternal and identical twins over a single denominator, add up the numerators and divide the normalized numerator of the event in question by the total numerator.  That is to say, 1/300 (freq. of I) is equal to 5/1,500 and 1/250 is equal to 6/1,500. The total probability of observing a twin in the population is 11/1,500.  Since we know that Elvis had a twin, we can ignore the denominator of 1,500 and just say that there are 11 moments of probability in which Elvis could have a twin and in 5 of those that twin is identical. When we ignore the denominator we are narrowing in on a `conditional space` and looking at the `conditional probability` of event A happening. 
 
 ---
 
