@@ -98,13 +98,13 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 
 >> `Bayes Theorem` P(A|B) = P(A)P(B|A)/P(B)  
 >> I this scenario:
->>>> * `P(A|B)` is the probability that Elvis' twin was identical given that he had a twin brother.  
->>>> * `P(A)` is the probability of having an identical twin which is `(1/300)`.    
->>>> * `P(B|A)` is the probability of having a twin given that you have an identical twin which equals `1` for obvious reasons.    
->>>> * `P(B)` is the probability of having a twin, which equals the prob. of having a fraternal _male_ twin (1/250, or half of 1/125) + prob. of having an identical twin (1/300) or `(11/1500)`.  
+>>> * `P(A|B)` is the probability that Elvis' twin was identical given that he had a twin brother.  
+>>> * `P(A)` is the probability of having an identical twin which is `(1/300)`.    
+>>> * `P(B|A)` is the probability of having a twin given that you have an identical twin which equals `1` for obvious reasons.    
+>>> * `P(B)` is the probability of having a twin, which equals the prob. of having a fraternal _male_ twin (1/250, or half of 1/125) + prob. of having an identical twin (1/300) or `(11/1500)`.  
 >>  
 >> Subbing into the equation:  
->>>> P(A|B) = (1/300)(1)/(11/1500) = **.4545**  
+>>> P(A|B) = (1/300)(1)/(11/1500) = **.4545**  
 >>  
 >> **`Note: `** this answer assumes that the observation of fraternal twins (1/125) is evenly disbursed between same-sexed and opposite-sexed twins, thus the frequency of 1/125 was divided by two to only represent the same-sexed fraternal twinning. 
 >> 
@@ -115,8 +115,9 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> `Frequentist: ` with an infinite number of samplings the underlyihng frequency can be indentified and recorded. The parameters are constant and the probability is fixed and actual.  If you roll a six sided die a number of times approaching infinity you will see each number 1/6th of the time, but there will be variability in the _observed_ frequency over time. 
 
+>> `Bayesian: ` the data are fixed, not the probability. The world is described probabilistically, not assumed to have a fixed and natural probability of an event occuring. Use of prior knowledge a prior probability can be offered, but this prior will be updated to a posterior probability following observations of data. 
 ---
 
 ## <a name="section-e"></a>5.  Optional Exercises
