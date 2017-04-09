@@ -84,7 +84,9 @@ This questions asks you to examine the function that produces random numbers.  I
 >> The pmf shows a flat/even distribution around 1/1000 for 1000 numbers produced by numpy.random.random and the cdf approximates the line y = x, suggesting all numbers between 0 and 1 are equally likely and therefore random.
 
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
-This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
+This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.  
+
+>> 0.3437
 
 
 
@@ -106,7 +108,7 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 >>  
 >> **`Note: `** this answer assumes that the observation of fraternal twins (1/125) is evenly disbursed between same-sexed and opposite-sexed twins, thus the frequency of 1/125 was divided by two to only represent the same-sexed fraternal twinning. 
 >> 
->> An alternative approach would be to normalize the observed frequencies of fraternal and identical twins over a single denominator, add up the numerators and divide the normalized numerator of the event in question by the total numerator.  That is to say, 1/300 (freq. of I) is equal to 5/1,500 and 1/250 is equal to 6/1,500. The total probability of observing a twin in the population is 11/1,500.  Since we know that Elvis had a twin, we can ignore the denominator of 1,500 and just say that there are 11 moments of probability in which Elvis could have a twin and in 5 of those that twin is identical. When we ignore the denominator we are narrowing in on a `conditional space` and looking at the `conditional probability` of event A happening. 
+>> **`An alternative approach: `** 1/300 (probability of identical twin) and 1/250 (probability of male fraternal twin) are equal to 5/1,500 and 6/1,500 respectively.  The total probability of a male twin is equal to their sum: 11/1,500. This is our `conditional space`. We know the event 'a twin was conceived' occured so our 11/1,500 happens with 100% probability.  Because of this, the 1,489 scenarios or units of probability are irrelevant, their probability is 0.  Therefore instead of a looking at 1,500 different moments we only need to look at 11 and, for the case of an identical twin, only 5 out of 11 or **.4545**.
 
 ---
 
